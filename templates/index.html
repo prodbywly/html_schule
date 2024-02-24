@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza bestellen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Willkommen bei Pizza Express</h1>
+    </header>
+    <main>
+        <h2>Unsere Pizzen</h2>
+        <ul>
+            <li>Margherita</li>
+            <li>Pepperoni</li>
+            <li>Hawaiian</li>
+        </ul>
+        <form action="/bestellen" method="post">
+            <h2>Bestellung aufgeben</h2>
+            <label for="pizza">Pizza wählen:</label>
+            <select id="pizza" name="pizza">
+                <option value="margherita">Margherita</option>
+                <option value="pepperoni">Pepperoni</option>
+                <option value="hawaiian">Hawaiian</option>
+            </select>
+            <button type="submit">Bestellen</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pizza Express</p>
+    </footer>
+</body>
+</html>
